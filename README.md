@@ -2,13 +2,15 @@
 
 Equipe : Geoffrey, Vanessa, Philippe, Simon D
 
-Création d'une application pour les supporters du Toulouse football club qui se divisera en 3 catégories
+Création d'une application avec Reac Native pour les supporters du Toulouse football club qui se divisera en 3 catégories
 
     Catégorie Photos : Sous la forme d'un concours des plus belles photos de supporters pendant le match.
     Catégorie Vote : Les supporters pourront voter pour l'homme du match.
     Catégorie Ola : Déclenchement automatique du flash lors d'une ola (avec une notification avant le démarrage de la ola?)
 
-### Pokrex :
+Création d'un site admin en ligne avec Laravel pour mettre à jour les joueurs de la feuille de match et selectionner les photos prise par les supporters pour le concours des plus belles photos. 
+
+### Pokrex : https://pokrex.com/rooms/tfc-supporter
 ### Kanban : https://github.com/Vanoux/TFC_supporter/projects/1 
 ### Journal de bord : https://github.com/Vanoux/TFC_supporter/wiki
 ### Wireframes :
