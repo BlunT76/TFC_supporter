@@ -2,11 +2,11 @@
 
 Equipe : Geoffrey, Vanessa, Philippe, Simon D
 
-Création d'une application avec Reac Native pour les supporters du Toulouse football club qui se divisera en 3 catégories
+Création d'une application avec React Native pour les supporters du Toulouse football club qui se divisera en 3 catégories :
 
-    Catégorie Photos : Sous la forme d'un concours des plus belles photos de supporters pendant le match.
-    Catégorie Vote : Les supporters pourront voter pour l'homme du match.
-    Catégorie Ola : Déclenchement automatique du flash lors d'une ola (avec une notification avant le démarrage de la ola?)
+- Catégorie Photos : Sous la forme d'un concours des plus belles photos de supporters pendant le match. On pourra prendre des photos et voter/liker pour les photos sélectionnées par l'admin.
+- Catégorie Vote : Les supporters pourront voter pour l'homme du match.
+- Catégorie Ola : Déclenchement automatique du flash lors d'une ola (avec une notification avant le démarrage de la ola?)
 
 Création d'un site admin en ligne avec Laravel pour mettre à jour les joueurs de la feuille de match et selectionner les photos prise par les supporters pour le concours des plus belles photos. 
 
