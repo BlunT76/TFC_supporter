@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TfcplayerController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/register')->name('register')->middleware('auth');
+Route::get('/players', 'TfcplayerController@index')->name('players_index')->middleware('auth');
+Route::get('/players/create', 'TfcplayerController@create')->name('players_create')->middleware('auth');
+Route::post('/players/store', 'TfcplayerController@store')->name('players_store')->middleware('auth');

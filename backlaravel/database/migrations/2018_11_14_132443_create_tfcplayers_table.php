@@ -15,10 +15,13 @@ class CreateTfcplayersTable extends Migration
     {
         Schema::create('tfcplayers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('firstname');
+            $table->string('lastname');
             $table->string('portrait');
             $table->integer('number');
+            $table->string('position');
             $table->timestamps();
+            
         });
     }
 
