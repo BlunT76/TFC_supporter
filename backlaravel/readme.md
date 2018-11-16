@@ -11,5 +11,5 @@
 > DB_USERNAME=XXX (root ?)
 > DB_PASSWORD=XXX (root ?)
 
-- php artisan make:migration --seed => creates tables and seeds them
+- php artisan migrate --seed => creates tables and seeds them
 
