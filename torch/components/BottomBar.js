@@ -24,7 +24,7 @@ export default class BottomBar extends React.Component {
         super(props);
         name: BottomBar,
         this.state={
-            
+            activePage: "Accueil"
         };
 }
   // active ce qu'on veut au chargement du component
@@ -38,12 +38,14 @@ export default class BottomBar extends React.Component {
     
   }
 
+  _handlePage = () => {}
   
 
   render() {
     return (
       <View style={styles.container}>
         <Text>bottom bar</Text>
+        <Button onPress={() => this._handlePage()}></Button>
       </View>
     );
   }
