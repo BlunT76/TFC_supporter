@@ -16,7 +16,7 @@ class Tfcplayer extends Model
      * @var array
      */
     protected $fillable = [
-        'name' , 'portrait' , 'number'
+        'firstname' , 'lastname' , 'portrait' ,'number', 'position'
     ];
 
     public function votes()
