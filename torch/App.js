@@ -1,8 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, PixelRatio, TouchableOpacity, TouchableHighlight, Image, Button } from 'react-native';
 import OlaFlash from './components/OlaFlash.js'
-import BottomBar from './components/BottomBar.js'
+import Photos from './components/Photos.js'
 import Accueil from './components/Accueil.js'
+import Mvp from './components/Mvp.js'
+import Info from './components/Info.js'
 import { Ionicons } from '@expo/vector-icons';
 
 //detecte les dimensions de l'écran
@@ -46,7 +48,7 @@ export default class App extends React.Component {
   _handlePage = (id) =>{
     let a = this.state.isActive.map((x,i)=> i==id ? true : false)
     this.setState({isActive: a}, ()=>{
-      console.log(this.state.isActive)
+      //console.log(this.state.isActive)
     })
     
     //this.state.isActive.fill(false)
@@ -58,11 +60,13 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        
         {this.state.isActive[0] &&<Accueil name= 'Accueil' style={styles.page}/>}
+        {this.state.isActive[1] &&<Mvp name= 'Mvp' style={styles.page}/>}
+        {this.state.isActive[2] &&<Photos name= 'Photos' style={styles.page}/>}
         {this.state.isActive[3] &&<OlaFlash name='OlaFlash' style={styles.page}/>}
+        {this.state.isActive[4] &&<Info name= 'Info' style={styles.page}/>}
+
         
-        {/* <View style={styles.bottomBar}> */}
           <View style={styles.buttonContainer}>
           <TouchableOpacity onPress={() => this._handlePage(0)} style={styles.button}>
             <Ionicons name="md-home" size={32} color="#3F3154" />
