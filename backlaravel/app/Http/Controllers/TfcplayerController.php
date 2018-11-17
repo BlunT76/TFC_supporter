@@ -14,7 +14,8 @@ class TfcplayerController extends Controller
      */
     public function index()
     {
-        //
+        $players = Tfcplayer::orderBy('position', 'asc')->get();
+        return view('tfcplayers.index', compact('players'));
     }
 
     /**
@@ -24,7 +25,7 @@ class TfcplayerController extends Controller
      */
     public function create()
     {
-        //
+        return view('tfcplayers.create');
     }
 
     /**
@@ -35,7 +36,14 @@ class TfcplayerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $player = Tfcplayer::create([
+            'firstname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
+            'portrait' => $request->input('portrait'),
+            'number' => $request->input('number'),
+            'position' => $request->input('position'),
+        ]);
+        return redirect()->route('players_index');
     }
 
     /**
