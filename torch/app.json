@@ -2,9 +2,6 @@
   "expo": {
     "name": "TFC",
     "description": "The TFC supporter app",
-    "splash": {
-      "image": "./assets/splash.png"
-    },
     "slug": "torch",
     "privacy": "public",
     "sdkVersion": "31.0.0",

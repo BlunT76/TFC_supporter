@@ -19,10 +19,10 @@ const heightPercentageToDP = heightPercent => {
 export { widthPercentageToDP, heightPercentageToDP };
 
 
-export default class Accueil extends React.Component {
+export default class Photos extends React.Component {
     constructor(props) {
         super(props);
-        name: Accueil,
+        name: Photos,
         this.state={
           dataSource: null,
           isLoading: false,
@@ -30,28 +30,28 @@ export default class Accueil extends React.Component {
 }
   // active ce qu'on veut au chargement du component
   async componentWillMount() {
-    
+    return fetch('http://192.168.1.36:8000/api/players')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson.players)
+        this.setState({
+          isLoading: true,
+          dataSource: responseJson.players,
+        }, function(){
+          this.setState({
+            isLoading: false,
+          })
+          console.log(this.state.dataSource)
+        });
+
+      })
+      .catch((error) =>{
+        console.log(error);
+      });
     
 }
   componentDidMount(){
-    // return fetch('http://192.168.1.36:8000/api/players')
-    //   .then((response) => response.json())
-    //   .then((responseJson) => {
-    //     console.log(responseJson.players)
-    //     this.setState({
-    //       isLoading: true,
-    //       dataSource: responseJson.players,
-    //     }, function(){
-    //       this.setState({
-    //         isLoading: false,
-    //       })
-    //       console.log(this.state.dataSource)
-    //     });
-
-    //   })
-    //   .catch((error) =>{
-    //     console.log(error);
-    //   });
+    
   }
 
   //componentWillUnmount desactive ce qu'on veut lorsque l'on quitte la page ou l'app ou le component
@@ -65,7 +65,7 @@ export default class Accueil extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.titre}>Bienvenue sur l'App {"\n"} des {"\n"} Supporters du TFC</Text>
+        <Text style={styles.titre}>Envoie tes plus belles Photos de Supporter</Text>
         
         
         

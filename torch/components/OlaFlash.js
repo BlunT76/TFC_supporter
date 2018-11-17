@@ -155,12 +155,12 @@ export default class OlaFlash extends React.Component {
             onValueChange={(val) => this._flashSettingsSet(val)} 
           />
           <Text>Réglage de l'intervalle entre les Flash {"\n"}
-          Augmenter la valeur si les flashs ont du mal a s'éteindre</Text>
+          Augmenter la valeur si les flashs ont du mal a s'éteindre
+          </Text>
         </View>}
 
         <TouchableOpacity onPress={() => this._handleOptions()} style={styles.options}>
           <Ionicons name="md-settings" size={64} color="#C0B8D3" />
-          {/* <Text>Options</Text> */}
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => this._handlePress()} style={styles.button}>
@@ -181,7 +181,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#3F3154',
     paddingTop: heightPercentageToDP("1%"),
     alignItems: "center",
-    // alignContent: "space-around",
     justifyContent: "space-around"
   },
   buttonContainer: {
@@ -190,11 +189,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#3F3154',
-    
-    // borderWidth: heightPercentageToDP("5%"),
-    // borderRadius: 360,
-    // borderColor: "#fff",
-    
   },
   button: {
     width: widthPercentageToDP("80%"),
@@ -244,5 +238,11 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: heightPercentageToDP("2%"),
     marginBottom: heightPercentageToDP("2%"),
+  },
+  titre:{
+    fontSize: heightPercentageToDP("5%"),
+    textAlign: "center",
+    color: "#C0B8D3",
+    margin: widthPercentageToDP("1%")
   }
 });
