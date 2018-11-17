@@ -54,7 +54,10 @@ class TfcplayerController extends Controller
      */
     public function show(Tfcplayer $tfcplayer)
     {
-        //
+        $res = Tfcplayer::All();
+        return response()->json([
+            'players' => $res
+        ]);
     }
 
     /**
