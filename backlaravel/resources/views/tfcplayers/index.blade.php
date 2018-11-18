@@ -24,7 +24,7 @@
       <td>{{ $player->number }}</td>
       <td>{{ $player->position }}</td>
       <td><a href="" type="button" class="btn btn-success" name="id" value= {{ $player-> id }}>Editer</a></td>
-      <td><a href="" type="button" class="btn btn-danger" name="id" value= {{ $player-> id }}>Supprimer</a></td>
+      <td><a href="{{route('players_destroy', $player->id)}}" type="button" class="btn btn-danger">Supprimer</a></td>
     </tr>
     @endforeach
   </tbody>

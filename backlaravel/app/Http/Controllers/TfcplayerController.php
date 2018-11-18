@@ -90,10 +90,9 @@ class TfcplayerController extends Controller
      * @param  \App\Tfcplayer  $tfcplayer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tfcplayer $tfcplayer)
+    public function destroy($id)
     {
-        $player = Tfcplayer::find($id);
-        $player->delete( $request->input('id') );
+        Tfcplayer::find($id)->delete();
         return redirect()->route('players_index');
     }
 }
