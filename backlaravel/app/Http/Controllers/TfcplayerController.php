@@ -68,7 +68,8 @@ class TfcplayerController extends Controller
      */
     public function edit(Tfcplayer $tfcplayer)
     {
-        //
+        $player = Tfcplayer::find($id);
+        return redirect()->route('');
     }
 
     /**
@@ -91,6 +92,8 @@ class TfcplayerController extends Controller
      */
     public function destroy(Tfcplayer $tfcplayer)
     {
-        //
+        $player = Tfcplayer::find($id);
+        $player->delete( $request->input('id') );
+        return redirect()->route('players_index');
     }
 }
