@@ -13,11 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
+
+Route::get('/players', 'TfcplayerController@show');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/players', 'TfcplayerController@indexToApp');
-
 Route::get('/photos' , 'TopphotoController@index');
-
