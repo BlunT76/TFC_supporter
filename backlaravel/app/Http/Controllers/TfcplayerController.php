@@ -18,6 +18,14 @@ class TfcplayerController extends Controller
         return view('tfcplayers.index', compact('players'));
     }
 
+    public function indexToApp()
+    {
+        $res = Tfcplayer::All();
+        return response()->json([
+            'players' => $res
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

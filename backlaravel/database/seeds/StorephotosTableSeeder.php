@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TStorephotosTableSeeder extends Seeder
+class StorephotosTableSeeder extends Seeder
 {
     public function run(){
         DB::table('storephotos')->insert([

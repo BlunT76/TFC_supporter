@@ -14,7 +14,10 @@ class TopphotoController extends Controller
      */
     public function index()
     {
-        //
+        $res = Topphoto::with('game')->get();
+        return response()->json([
+            'photos' => $res
+        ]);
     }
 
     /**

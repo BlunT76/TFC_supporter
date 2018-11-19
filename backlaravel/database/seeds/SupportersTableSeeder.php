@@ -11,6 +11,6 @@ class SupportersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Supporter::class, 80)->create();
+        factory(App\Supporter::class, 20)->create();
     }
 }
