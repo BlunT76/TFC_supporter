@@ -14,7 +14,8 @@ class StorephotoController extends Controller
      */
     public function index()
     {
-        return view('tfcphotos.index');
+        $photos = Storephoto::All();
+        return view('tfcphotos.index', compact('photos'));
         
     }
 
@@ -45,9 +46,10 @@ class StorephotoController extends Controller
      * @param  \App\Storephoto  $storephoto
      * @return \Illuminate\Http\Response
      */
-    public function show(Storephoto $storephoto)
+    public function show($id)
     {
-        //
+        $photo = Storephoto::find($id);
+        return view('tfcphotos.show', compact('photo'));
     }
 
     /**
