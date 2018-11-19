@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Storephoto;
+use App\Topphoto;
 use Illuminate\Http\Request;
 
 class StorephotoController extends Controller
@@ -84,5 +85,18 @@ class StorephotoController extends Controller
     public function destroy(Storephoto $storephoto)
     {
         //
+    }
+
+    public function send($id)
+    {
+        $photo = Storephoto::find($id);
+        Topphoto::create([
+            'supporter_id'=> $photo->supporter_id, 
+            'game_id' => $photo->game_id, 
+            'url' => $photo->url,
+            'rank'=> 1
+        ]);
+        return redirect()->route('photos_index');
+
     }
 }
