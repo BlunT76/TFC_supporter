@@ -17,5 +17,19 @@ class GamesTableSeeder extends Seeder
             'day'=> new DateTime(),
             'season' => '2018/2019'
         ]);
+
+        DB::table('games')->insert([
+            'hometeam' => 'TFC',
+            'visitor'=> 'OM',
+            'day'=> new DateTime(),
+            'season' => '2018/2019'
+        ]);
+
+        DB::table('games')->insert([
+            'hometeam' => 'TFC',
+            'visitor'=> 'EAG',
+            'day'=> new DateTime(),
+            'season' => '2018/2019'
+        ]);
     }
 }
