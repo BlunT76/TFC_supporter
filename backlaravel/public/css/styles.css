@@ -1,6 +1,13 @@
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////Styles TFC Supporter//////////////////////////////// */
+nav {
+    background-color: #3F3154;
+}
+
+.btnTfc {
+    background-color: #9c85be;
+}
 .card {
     height: 45vh;
 }
