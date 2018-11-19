@@ -86,6 +86,10 @@ class StorephotoController extends Controller
     {
         //
     }
+    public function select($id)
+    {
+        $photo = Storephoto::find($id);
+    }
 
     public function send($id)
     {
