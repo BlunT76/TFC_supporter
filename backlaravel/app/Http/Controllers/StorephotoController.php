@@ -14,7 +14,7 @@ class StorephotoController extends Controller
      */
     public function index()
     {
-        //
+        return view('tfcphotos.index');
     }
 
     /**
