@@ -66,10 +66,10 @@ class TfcplayerController extends Controller
      * @param  \App\Tfcplayer  $tfcplayer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tfcplayer $tfcplayer)
+    public function edit($id)
     {
-        $player = Tfcplayer::find($id);
-        return redirect()->route('');
+        $res = Tfcplayer::find($id);
+        return view('tfcplayers.edit' , compact('res'));
     }
 
     /**
@@ -79,9 +79,16 @@ class TfcplayerController extends Controller
      * @param  \App\Tfcplayer  $tfcplayer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tfcplayer $tfcplayer)
+    public function update(Request $request, $id)
     {
-        //
+        Tfcplayer::find($id)->update([
+            'firstname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
+            'portrait' => $request->input('portrait'),
+            'number' => $request->input('number'),
+            'position' => $request->input('position'),
+        ]);
+        return redirect()->route('players_index');
     }
 
     /**

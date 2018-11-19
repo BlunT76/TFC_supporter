@@ -22,3 +22,5 @@ Route::get('/players', 'TfcplayerController@index')->name('players_index')->midd
 Route::get('/players/create', 'TfcplayerController@create')->name('players_create')->middleware('auth');
 Route::post('/players/store', 'TfcplayerController@store')->name('players_store')->middleware('auth');
 Route::get('/players/destroy{id}', 'TfcplayerController@destroy')->name('players_destroy')->middleware('auth');
+Route::get('/players/edit/{id}', 'TfcplayerController@edit')->name('players_edit')->middleware('auth');
+Route::post('/players/update{id}', 'TfcplayerController@update')->name('players_update')->middleware('auth');
