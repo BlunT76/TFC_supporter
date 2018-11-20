@@ -99,8 +99,7 @@ class StorephotoController extends Controller
             Topphoto::create([
                 'supporter_id'=> $photo->supporter_id, 
                 'game_id' => $photo->game_id, 
-                'url' => $photo->url,
-                'rank'=> 1
+                'url' => $photo->url
             ]);   
         }
         return redirect()->route('photos_index')->with('success', 'Photos envoyée dans le Top de l\'appli bouyaka');
