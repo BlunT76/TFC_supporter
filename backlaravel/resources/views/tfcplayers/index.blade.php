@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="text-center">
-  <h1>TFC BOUYAKA !!</h1>
+  <h1>JOUEURS DU TFC</h1>
 </div>
 <div class="mb-5 ml-4">
   <a href="{{route('players_create')}}" type="button" class="btn btn-primary" title="Ajouter un nouveau joueur"><i class="fas fa-plus mr-2"></i>Nouveau joueur</a>

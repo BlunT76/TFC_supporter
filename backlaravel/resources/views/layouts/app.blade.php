@@ -45,8 +45,11 @@
                                 TFC') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('photos_index') }}">{{ __('Les photos de
+                            <a class="nav-link active mr-3" href="{{ route('photos_index') }}">{{ __('Les photos des
                                 supporters') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ route('top_index') }}">{{ __('Le top photo') }}</a>
                         </li>
                     </ul>
 
@@ -73,7 +76,7 @@
         <main class="py-4">
             @if(count($errors) > 0)
             @foreach($errors->all() as $error)
-            <div class="alert alert-danger alert-dismissible fade show col-6" role="alert">
+            <div class="alert alert-danger alert-dismissible fade show col-xs-12 col-md-6 mx-auto text-center" role="alert">
                 {{$error}}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -83,7 +86,7 @@
             @endif
 
             @if(session('success'))
-            <div class="alert alert-success alert-dismissible fade show col-6" role="alert">
+            <div class="alert alert-success alert-dismissible fade show col-xs-12 col-md-6 mx-auto text-center" role="alert">
                 {{session("success")}}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -92,7 +95,7 @@
             @endif
 
             @if(session('error'))
-            <div class="alert alert-danger alert-dismissible fade show col-6" role="alert">
+            <div class="alert alert-danger alert-dismissible fade show col-xs-12 col-md-6 mx-auto text-center" role="alert">
                 {{session("error")}}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>

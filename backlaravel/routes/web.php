@@ -28,3 +28,6 @@ Route::post('/players/update{id}', 'TfcplayerController@update')->name('players_
 Route::get('/photos', 'StorephotoController@index')->name('photos_index')->middleware('auth');
 Route::get('/photos/destroy', 'StorephotoController@destroy')->name('photos_destroy')->middleware('auth');
 Route::post('/photos/select', 'StorephotoController@select')->name('photos_select')->middleware('auth');
+
+Route::get('/top', 'TopphotoController@index')->name('top_index')->middleware('auth');
+Route::get('/top/destroy{id}', 'TopphotoController@destroy')->name('top_destroy')->middleware('auth');
