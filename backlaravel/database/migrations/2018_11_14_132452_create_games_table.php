@@ -18,7 +18,6 @@ class CreateGamesTable extends Migration
             $table->string('hometeam');
             $table->string('visitor');
             $table->date('day');
-            $table->string('season');
             $table->timestamps();
         });
     }

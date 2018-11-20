@@ -18,7 +18,6 @@ class CreateTopphotosTable extends Migration
             $table->integer('game_id');
             $table->integer('supporter_id');
             $table->string('url');
-            $table->integer('rank');
             $table->timestamps();
         });
     }

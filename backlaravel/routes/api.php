@@ -20,4 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/photos' , 'TopphotoController@index');
+// récupére les matchs terminés
+Route::get('/pastgames' , 'GameController@pastGames');
+// récupére les matchs à venir
+Route::get('/futuregames' , 'GameController@futureGames');
