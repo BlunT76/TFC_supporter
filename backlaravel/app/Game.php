@@ -21,7 +21,7 @@ class Game extends Model
 
     public function topphotos()
     {
-    	return $this->hasMany('App\Toppgoto');
+    	return $this->hasMany('App\Topphoto');
     }
 
     public function storephotos()

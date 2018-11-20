@@ -20,4 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/photos' , 'TopphotoController@index');
+Route::get('/pastgames' , 'GameController@pastGames');
+Route::get('/futuregames' , 'GameController@futureGames');

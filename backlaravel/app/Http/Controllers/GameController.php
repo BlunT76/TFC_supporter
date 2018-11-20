@@ -14,8 +14,26 @@ class GameController extends Controller
      */
     public function index()
     {
-        //
+        
     }
+
+    public function pastGames()
+    {
+        $res = Game::with('topphotos')->whereDate('day','<',date('Y-m-d'))->orderBy('day','desc')->get();
+        return response()->json([
+            'games' => $res
+        ]);
+    }
+
+    public function futureGames()
+    {
+        $res = Game::whereDate('day','>=',date('Y-m-d'))->orderBy('day','asc')->get();
+        return response()->json([
+            'games' => $res
+        ]);
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
