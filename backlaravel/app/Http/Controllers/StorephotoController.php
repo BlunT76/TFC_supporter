@@ -82,10 +82,13 @@ class StorephotoController extends Controller
      * @param  \App\Storephoto  $storephoto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Storephoto $storephoto)
+    public function destroy()
     {
-        //
+        Storephoto::truncate();
+        return redirect()->route('photos_index')->with('success', 'Toutes les photos ont été supprimées !');
     }
+
+
     public function select(Request $request)
     {
         $topPhoto = $request->all();
@@ -102,18 +105,5 @@ class StorephotoController extends Controller
         }
         return redirect()->route('photos_index')->with('success', 'Photos envoyée dans le Top de l\'appli bouyaka');
         
-    }
-
-    public function send($id)
-    {
-        // $photo = Storephoto::find($id);
-        // Topphoto::create([
-        //     'supporter_id'=> $photo->supporter_id, 
-        //     'game_id' => $photo->game_id, 
-        //     'url' => $photo->url,
-        //     'rank'=> 1
-        // ]);
-        return redirect()->route('photos_index');
-
     }
 }

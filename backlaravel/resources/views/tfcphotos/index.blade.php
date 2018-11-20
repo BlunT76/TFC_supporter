@@ -5,6 +5,32 @@
 <div class="container-fluid">
 
     <h2>Espace photos supporters Bouyaka !!!!</h2>
+
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete" title="Supprimer toutes les photos">Effacer
+        tout</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger font-weight-bold">Suppression</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Voulez-vous vraiment supprimer toutes les photos ? <br>Cette action est irrémédiable.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <a href="{{route('photos_destroy')}}" type="button" class="btn btn-danger">Supprimer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <form method="POST" action="{{route('photos_select')}}">
         @csrf
         <div class="row">
@@ -12,8 +38,9 @@
             <div class="card col-3">
                 <img class="card-img-top" src="{{$photo->url}}" alt="photo supporter">
                 <div class="card-body">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show{{$photo->id}}" title="Voir cette photo"><i class="far fa-eye"></i></button>
-                    
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show{{$photo->id}}"
+                        title="Voir cette photo"><i class="far fa-eye"></i></button>
+
                     <!-- Modal -->
                     <div class="modal fade" id="show{{$photo->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
@@ -32,7 +59,7 @@
                     </div>
                     <!-- CheckBox -->
                     <div class="form-check text-right">
-                        <input type="checkbox" class="form-check-input" id="checkBox" name="{{$photo->id}}" value="{{$photo->id}}"> 
+                        <input type="checkbox" class="form-check-input" id="checkBox" name="{{$photo->id}}" value="{{$photo->id}}">
                         <label class="form-check-label" for="checkBox">Selectionner</label>
                     </div>
                 </div>

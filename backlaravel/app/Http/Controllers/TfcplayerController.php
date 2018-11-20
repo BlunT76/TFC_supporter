@@ -51,7 +51,7 @@ class TfcplayerController extends Controller
             'number' => $request->input('number'),
             'position' => $request->input('position'),
         ]);
-        return redirect()->route('players_index');
+        return redirect()->route('players_index')->with('success', 'Vous avez bien ajouté un nouveau joueur.');
     }
 
     /**
@@ -96,7 +96,7 @@ class TfcplayerController extends Controller
             'number' => $request->input('number'),
             'position' => $request->input('position'),
         ]);
-        return redirect()->route('players_index');
+        return redirect()->route('players_index')->with('success', 'Vous avez bien modifie le joueur.');
     }
 
     /**
@@ -108,6 +108,6 @@ class TfcplayerController extends Controller
     public function destroy($id)
     {
         Tfcplayer::find($id)->delete();
-        return redirect()->route('players_index');
+        return redirect()->route('players_index')->with('success', 'Vous avez bien supprimé le joueur.');
     }
 }
