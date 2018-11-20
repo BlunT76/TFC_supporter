@@ -24,15 +24,39 @@ class GamesTableSeeder extends Seeder
         ]);
 
         DB::table('games')->insert([
-            'hometeam' => 'PSG',
+            'hometeam' => 'LOSC',
             'visitor'=> 'TFC',
             'day'=> "2018-12-19"
         ]);
 
         DB::table('games')->insert([
-            'hometeam' => 'OL',
+            'hometeam' => 'PSG',
             'visitor'=> 'TFC',
             'day'=> "2018-12-05"
+        ]);
+
+        DB::table('games')->insert([
+            'hometeam' => 'TFC',
+            'visitor'=> 'ASSE',
+            'day'=> "2019-11-19"
+        ]);
+
+        DB::table('games')->insert([
+            'hometeam' => 'TFC',
+            'visitor'=> 'OM',
+            'day'=> "2019-10-19"
+        ]);
+
+        DB::table('games')->insert([
+            'hometeam' => 'EAG',
+            'visitor'=> 'TFC',
+            'day'=> "2019-12-19"
+        ]);
+
+        DB::table('games')->insert([
+            'hometeam' => 'FCNantes',
+            'visitor'=> 'TFC',
+            'day'=> "2019-12-05"
         ]);
     }
 }
