@@ -5,7 +5,7 @@
 <div class="container-fluid">
 
     <h2>Espace photos supporters Bouyaka !!!!</h2>
-    <form action="">
+    <form method="POST" action="{{route('photos_select')}}">
         @csrf
         <div class="row">
             @foreach ($photos as $photo)
@@ -30,10 +30,10 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- CheckBox -->
                     <div class="form-check text-right">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Selectionner</label>
+                        <input type="checkbox" class="form-check-input" id="checkBox" name="{{$photo->id}}" value="{{$photo->id}}"> 
+                        <label class="form-check-label" for="checkBox">Selectionner</label>
                     </div>
                 </div>
             </div>

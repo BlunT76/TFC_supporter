@@ -27,3 +27,4 @@ Route::post('/players/update{id}', 'TfcplayerController@update')->name('players_
 
 Route::get('/photos', 'StorephotoController@index')->name('photos_index')->middleware('auth');
 Route::get('/photos/send{id}', 'StorephotoController@send')->name('photos_send')->middleware('auth');
+Route::post('/photos/select', 'StorephotoController@select')->name('photos_select')->middleware('auth');

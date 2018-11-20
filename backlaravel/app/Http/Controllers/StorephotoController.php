@@ -86,20 +86,33 @@ class StorephotoController extends Controller
     {
         //
     }
-    public function select($id)
+    public function select(Request $request)
     {
-        $photo = Storephoto::find($id);
+        $topPhoto = $request->all();
+        array_shift($topPhoto);
+        foreach ($topPhoto as $id)
+        {
+            $photo = Storephoto::find($id);
+            Topphoto::create([
+                'supporter_id'=> $photo->supporter_id, 
+                'game_id' => $photo->game_id, 
+                'url' => $photo->url,
+                'rank'=> 1
+            ]);   
+        }
+        return redirect()->route('photos_index')->with('success', 'Photos envoyée dans le Top de l\'appli bouyaka');
+        
     }
 
     public function send($id)
     {
-        $photo = Storephoto::find($id);
-        Topphoto::create([
-            'supporter_id'=> $photo->supporter_id, 
-            'game_id' => $photo->game_id, 
-            'url' => $photo->url,
-            'rank'=> 1
-        ]);
+        // $photo = Storephoto::find($id);
+        // Topphoto::create([
+        //     'supporter_id'=> $photo->supporter_id, 
+        //     'game_id' => $photo->game_id, 
+        //     'url' => $photo->url,
+        //     'rank'=> 1
+        // ]);
         return redirect()->route('photos_index');
 
     }
