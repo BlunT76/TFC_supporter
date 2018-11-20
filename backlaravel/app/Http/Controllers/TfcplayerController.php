@@ -88,7 +88,7 @@ class TfcplayerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {   
         Tfcplayer::find($id)->update([
             'firstname' => $request->input('firstname'),
             'lastname' => $request->input('lastname'),

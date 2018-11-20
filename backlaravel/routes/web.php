@@ -24,3 +24,7 @@ Route::post('/players/store', 'TfcplayerController@store')->name('players_store'
 Route::get('/players/destroy{id}', 'TfcplayerController@destroy')->name('players_destroy')->middleware('auth');
 Route::get('/players/edit/{id}', 'TfcplayerController@edit')->name('players_edit')->middleware('auth');
 Route::post('/players/update{id}', 'TfcplayerController@update')->name('players_update')->middleware('auth');
+
+Route::get('/photos', 'StorephotoController@index')->name('photos_index')->middleware('auth');
+Route::get('/photos/send{id}', 'StorephotoController@send')->name('photos_send')->middleware('auth');
+Route::post('/photos/select', 'StorephotoController@select')->name('photos_select')->middleware('auth');

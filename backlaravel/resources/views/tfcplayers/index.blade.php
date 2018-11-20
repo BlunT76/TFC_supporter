@@ -1,18 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="text-center">
+  <h1>TFC BOUYAKA !!</h1>
+</div>
+<div class="mb-5 ml-4">
+  <a href="{{route('players_create')}}" type="button" class="btn btn-primary" title="Ajouter un nouveau joueur"><i class="fas fa-plus mr-2"></i>Nouveau joueur</a>
+</div>
 
-<h1>TFC BOUYAKA !!</h1>
-
-<a href="{{route('players_create')}}" type="button" class="btn btn-primary">Nouveau joueur</a>
-
-<table class="table">
-  <thead class="thead-light">
+<table class="table table-striped">
+  <thead class="theadTfc">
     <tr>
       <th scope="col">Joueur</th>
       <th scope="col">Numéro</th>
       <th scope="col">Poste</th>
-      <th scope="col">Action</th>
       <th scope="col"></th>
 
     </tr>
@@ -23,21 +24,21 @@
       <td>{{ $player->firstname }} {{ $player->lastname}}</td>
       <td>{{ $player->number }}</td>
       <td>{{ $player->position }}</td>
-      <td><a href="{{route('players_edit', $player->id)}}" type="button" class="btn btn-success">Editer</a></td>
-      <td>
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#ok{{$player->id}}">Supprimer</button>
+      <td class="text-right">
+        <a href="{{route('players_edit', $player->id)}}" type="button" class="btn btnTfc" title="Modifier le joueur">Editer</a>
+        <button type="button" title="Supprimer le joueur" class="btn btn-danger" data-toggle="modal" data-target="#ok{{$player->id}}"><i class="fas fa-times"></i></button>
           <!-- Modal -->
           <div class="modal fade" id="ok{{$player->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Supprimer ?</h5>
+                  <h5 class="modal-title text-danger font-weight-bold">Suppression</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                <p>Etes vous sur de vouloir supprimer {{$player->firstname}} {{$player->lastname}} ?</p>
+                <p>Voulez-vous vraiment supprimer {{$player->firstname}} {{$player->lastname}} ?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Storephoto;
+use App\Topphoto;
 use Illuminate\Http\Request;
 
 class StorephotoController extends Controller
@@ -14,6 +15,8 @@ class StorephotoController extends Controller
      */
     public function index()
     {
+        $photos = Storephoto::All();
+        return view('tfcphotos.index', compact('photos'));
         
     }
 
@@ -44,9 +47,10 @@ class StorephotoController extends Controller
      * @param  \App\Storephoto  $storephoto
      * @return \Illuminate\Http\Response
      */
-    public function show(Storephoto $storephoto)
+    public function show($id)
     {
-        //
+        $photo = Storephoto::find($id);
+        return view('tfcphotos.show', compact('photo'));
     }
 
     /**
@@ -81,5 +85,35 @@ class StorephotoController extends Controller
     public function destroy(Storephoto $storephoto)
     {
         //
+    }
+    public function select(Request $request)
+    {
+        $topPhoto = $request->all();
+        array_shift($topPhoto);
+        foreach ($topPhoto as $id)
+        {
+            $photo = Storephoto::find($id);
+            Topphoto::create([
+                'supporter_id'=> $photo->supporter_id, 
+                'game_id' => $photo->game_id, 
+                'url' => $photo->url,
+                'rank'=> 1
+            ]);   
+        }
+        return redirect()->route('photos_index')->with('success', 'Photos envoyée dans le Top de l\'appli bouyaka');
+        
+    }
+
+    public function send($id)
+    {
+        // $photo = Storephoto::find($id);
+        // Topphoto::create([
+        //     'supporter_id'=> $photo->supporter_id, 
+        //     'game_id' => $photo->game_id, 
+        //     'url' => $photo->url,
+        //     'rank'=> 1
+        // ]);
+        return redirect()->route('photos_index');
+
     }
 }
