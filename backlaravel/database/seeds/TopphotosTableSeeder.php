@@ -33,6 +33,7 @@ class TopphotosTableSeeder extends Seeder
             'supporter_id' => 1 ,
             'game_id' => 2 ,
             'url' => 'https://photos2.tf1.fr/660/370/football-matchs-equipe-de-france-voir-resume-russie-france-1-af70fe-0@1x.jpg' 
+        ]);
 
         DB::table('topphotos')->insert([
             'supporter_id' => 1 ,
