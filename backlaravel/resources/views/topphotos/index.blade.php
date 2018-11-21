@@ -7,7 +7,7 @@
 @foreach($res as $game)
 
 <div class="container-fluid">
-    <h3>{{$game->hometeam}} VS {{$game->visitor}} du {{$game->day}}</h3>
+    <h2>{{$game->hometeam}} VS {{$game->visitor}} du {{$game->day}}</h2>
     <div class="row">
 
         @foreach($game->topphotos as $photo)
