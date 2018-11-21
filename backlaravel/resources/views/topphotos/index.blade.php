@@ -10,7 +10,7 @@
 
 <div class="container-fluid my-5">
     <div class="text-center">
-    <h2 class="font-weight-bold colorTfc">{{$game->hometeam}} VS {{$game->visitor}} du {{$game->day}}</h2>
+    <h2 class="font-weight-bold colorTfc">{{$game->hometeam}} vs {{$game->visitor}} du {{$game->day}}</h2>
     </div>
     <div class="row">
 
