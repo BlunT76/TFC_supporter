@@ -17,7 +17,6 @@ class CreateVotesTable extends Migration
             $table->increments('id');
             $table->integer('tfcplayer_id');
             $table->integer('game_id');
-            $table->integer('supporter_id');
             $table->timestamps();
         });
     }

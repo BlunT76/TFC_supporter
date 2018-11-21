@@ -16,13 +16,8 @@ class Vote extends Model
      * @var array
      */
     protected $fillable = [
-        'supporter_id', 'game_id', 'tfcplayer_id'
+        'game_id', 'tfcplayer_id'
     ];
-
-    public function supporter()
-    {
-    	return $this->belongsTo('App\Supporter');
-    }
 
     public function game()
     {

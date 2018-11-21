@@ -30,3 +30,6 @@ Route::get('/currentgame' , 'GameController@currentGame');
 
 // récupère le boolean qui détermine si un nouveau bestplayer doit être crée
 Route::get('/newbest' , 'BooleanbestplayerController@booleanbestplayer');
+
+
+Route::post('/voter', 'VoteController@voter');

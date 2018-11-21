@@ -17,6 +17,20 @@ class VoteController extends Controller
         //
     }
 
+    public function voter(Request $request)
+    {
+        // Vote::create([
+        //     'game_id' => $game_id,
+        //     'tfcplayer_id' => $tfcplayer_id
+        // ]);
+
+        $res = $request->all();
+
+        return response()->json([
+            'game' => $res
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
