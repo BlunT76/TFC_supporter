@@ -39,4 +39,9 @@ class Game extends Model
     	return $this->hasMany('App\Tfcplayer');
     }
 
+    public function bestplayer()
+    {
+        return $this->hasOne('App\Bestplayer');
+    }
+
 }

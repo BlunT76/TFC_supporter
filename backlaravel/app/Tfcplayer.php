@@ -28,4 +28,9 @@ class Tfcplayer extends Model
     {
     	return $this->hasMany('App\Game');
     }
+
+    public function bestplayers ()
+    {
+        return $this->hasMany('App\Bestplayer');
+    }
 }

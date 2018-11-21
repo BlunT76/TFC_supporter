@@ -24,3 +24,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/pastgames' , 'GameController@pastGames');
 // récupére les matchs à venir
 Route::get('/futuregames' , 'GameController@futureGames');
+// récupère le match du jour , s'il existe
+Route::get('/currentgame' , 'GameController@currentGame');
+
+
+// récupère le boolean qui détermine si un nouveau bestplayer doit être crée
+Route::get('/newbest' , 'BooleanbestplayerController@booleanbestplayer');

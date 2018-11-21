@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(StorephotosTableSeeder::class);
         $this->call(GamesTableSeeder::class);
         $this->call(TopphotosTableSeeder::class);
+        $this->call(BooleanbestplayersTableSeeder::class);
 
     }
 }
