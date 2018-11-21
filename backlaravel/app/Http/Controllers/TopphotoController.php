@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Topphoto;
+use App\Game;
 use Illuminate\Http\Request;
 
 class TopphotoController extends Controller
@@ -14,10 +15,9 @@ class TopphotoController extends Controller
      */
     public function index()
     {
-        $res = Topphoto::with('game')->get();
-        return response()->json([
-            'photos' => $res
-        ]);
+        $res = Game::with('topphotos')->whereDate('day','<',date('Y-m-d'))->orderBy('day','desc')->get();
+        //dd($res);
+        return view('topphotos.index', compact('res'));
     }
 
     /**
@@ -81,8 +81,9 @@ class TopphotoController extends Controller
      * @param  \App\Topphoto  $topphoto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Topphoto $topphoto)
+    public function destroy($id)
     {
-        //
+        Topphoto::findOrFail($id)->delete();
+        return redirect()->route('top_index')->with('success', 'Vous avez bien supprimé la photo.');
     }
 }

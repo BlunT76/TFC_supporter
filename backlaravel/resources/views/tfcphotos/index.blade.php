@@ -4,10 +4,14 @@
 
 <div class="container-fluid">
 
-    <h2>Espace photos supporters Bouyaka !!!!</h2>
+    <div class="text-center mt-4">
+    <h1 class=" font-weight-bold colorTfcBis">ESPACE PHOTOS SUPPORTERS TFC</h1>
+    </div>
 
+    <div class="text-right my-3">
     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete" title="Supprimer toutes les photos">Effacer
         tout</button>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -23,7 +27,7 @@
                     <p>Voulez-vous vraiment supprimer toutes les photos ? <br>Cette action est irrémédiable.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <button type="button" role="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
                     <a href="{{route('photos_destroy')}}" type="button" class="btn btn-danger">Supprimer</a>
                 </div>
             </div>
@@ -35,10 +39,11 @@
         @csrf
         <div class="row">
             @foreach ($photos as $photo)
-            <div class="card col-3">
-                <img class="card-img-top" src="{{$photo->url}}" alt="photo supporter">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card my-2 shadow cardPhoto">
+                <img class="card-img-top" src="{{$photo->url}}" alt="photo supporter {{$photo->id}}">
                 <div class="card-body">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show{{$photo->id}}"
+                    <button type="button" role="button" aria-label="voir la photo" class="btn btnTfc" data-toggle="modal" data-target="#show{{$photo->id}}"
                         title="Voir cette photo"><i class="far fa-eye"></i></button>
 
                     <!-- Modal -->
@@ -52,21 +57,24 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="{{$photo->url}}" alt="photo supporter" class="img-fluid">
+                                    <img src="{{$photo->url}}" alt="photo supporter {{$photo->id}}" class="img-fluid">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- CheckBox -->
                     <div class="form-check text-right">
-                        <input type="checkbox" class="form-check-input" id="checkBox" name="{{$photo->id}}" value="{{$photo->id}}">
-                        <label class="form-check-label" for="checkBox">Selectionner</label>
+                        <input type="checkbox" aria-label="selectionner" class="form-check-input" id="checkBox{{$photo->id}}" name="{{$photo->id}}" value="{{$photo->id}}" title="Selectionner pour le top photo">
+                        <label class="form-check-label" for="checkBox{{$photo->id}}">Selectionner</label>
                     </div>
                 </div>
             </div>
+            </div>
             @endforeach
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="text-center my-4 col-xs-12 col-md-6 mx-auto">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" title="Enregistrer les photos selectionnées">Envoyer</button>
+        </div>
     </form>
 
 </div>

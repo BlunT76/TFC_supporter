@@ -49,7 +49,7 @@ class StorephotoController extends Controller
      */
     public function show($id)
     {
-        $photo = Storephoto::find($id);
+        $photo = Storephoto::findOrFail($id);
         return view('tfcphotos.show', compact('photo'));
     }
 
@@ -95,7 +95,7 @@ class StorephotoController extends Controller
         array_shift($topPhoto);
         foreach ($topPhoto as $id)
         {
-            $photo = Storephoto::find($id);
+            $photo = Storephoto::findOrFail($id);
             Topphoto::create([
                 'supporter_id'=> $photo->supporter_id, 
                 'game_id' => $photo->game_id, 

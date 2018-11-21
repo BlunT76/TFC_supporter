@@ -76,7 +76,7 @@ class TfcplayerController extends Controller
      */
     public function edit($id)
     {
-        $res = Tfcplayer::find($id);
+        $res = Tfcplayer::findOrFail($id);
         return view('tfcplayers.edit' , compact('res'));
     }
 
@@ -89,7 +89,7 @@ class TfcplayerController extends Controller
      */
     public function update(Request $request, $id)
     {   
-        Tfcplayer::find($id)->update([
+        Tfcplayer::findOrFail($id)->update([
             'firstname' => $request->input('firstname'),
             'lastname' => $request->input('lastname'),
             'portrait' => $request->input('portrait'),
@@ -107,7 +107,7 @@ class TfcplayerController extends Controller
      */
     public function destroy($id)
     {
-        Tfcplayer::find($id)->delete();
+        Tfcplayer::findOrFail($id)->delete();
         return redirect()->route('players_index')->with('success', 'Vous avez bien supprimé le joueur.');
     }
 }

@@ -27,7 +27,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center mb-4">
-                <img src="images/tfc.png" alt="">
+                <img src="images/tfc.png" alt="Logo TFC">
                 <h1 class="font-weight-bold">TFC Supporter</h1>
                 <h2 class="pt-2">
                     Session Admin
