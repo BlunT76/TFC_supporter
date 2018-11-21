@@ -29,6 +29,8 @@
 
 <body>
     <div id="app">
+
+<!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -75,7 +77,6 @@
             </div>
         </nav>
 
-        <!-- Main Content -->
         <main class="py-4" role="main">
             @if(count($errors) > 0)
             @foreach($errors->all() as $error)
@@ -105,7 +106,10 @@
                 </button>
             </div>
             @endif
+            
+<!-- Main Content -->
             @yield('content')
+
         </main>
     </div>
 </body>
