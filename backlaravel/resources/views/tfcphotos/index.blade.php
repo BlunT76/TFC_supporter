@@ -9,7 +9,7 @@
     </div>
 
     <div class="text-right my-3">
-    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete" title="Supprimer toutes les photos">Effacer
+    <button type="button" class="btn btn-danger mb-3 pt-2" data-toggle="modal" data-target="#delete" title="Supprimer toutes les photos">Effacer
         tout</button>
     </div>
 
@@ -39,7 +39,7 @@
         @csrf
         <div class="row">
             @foreach ($photos as $photo)
-            <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="col-xs-12 col-md-6 col-lg-3">
             <div class="card my-2 shadow cardPhoto">
                 <img class="card-img-top" src="{{$photo->url}}" alt="photo supporter {{$photo->id}}">
                 <div class="card-body">

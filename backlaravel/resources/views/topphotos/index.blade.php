@@ -15,7 +15,7 @@
     <div class="row">
 
         @foreach($game->topphotos as $photo)
-        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="col-xs-12 col-md-6 col-lg-3">
         <div class="card my-2 shadow cardPhoto">
             <img class="card-img-top" src="{{$photo->url}}" alt="Top photo supporter {{$photo->id}} ">
             <div class="card-body">

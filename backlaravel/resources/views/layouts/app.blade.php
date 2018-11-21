@@ -31,7 +31,7 @@
     <div id="app">
 
 <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+        <nav class="navbar navbar-expand-md navbar-dark sticky-top bgTfc">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Accueil
@@ -111,6 +111,10 @@
             @yield('content')
 
         </main>
+
+        <footer class="bgTfc text-center">
+            <p class="pt-2 text-white">&copy Toulouse Football Club</p>
+        </footer>
     </div>
 </body>
 
