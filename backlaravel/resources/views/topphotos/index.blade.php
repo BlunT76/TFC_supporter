@@ -13,9 +13,9 @@
         @foreach($game->topphotos as $photo)
 
         <div class="card col-3">
-            <img class="card-img-top" src="{{$photo->url}}" alt="Top photo supporter">
+            <img class="card-img-top" src="{{$photo->url}}" alt="Top photo supporter {{$photo->id}} ">
             <div class="card-body">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#show{{$photo->id}}"
+                <button type="button" role="button" class="btn btnTfc" data-toggle="modal" aria-label="voir la photo" data-target="#show{{$photo->id}}"
                     title="Voir cette photo"><i class="far fa-eye"></i></button>
 
                 <!-- Modal -->
@@ -29,13 +29,13 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="{{$photo->url}}" alt="photo supporter" class="img-fluid">
+                                <img src="{{$photo->url}}" alt="photo supporter {{$photo->id}}" class="img-fluid">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button type="button" title="Supprimer le joueur" class="btn btn-danger" data-toggle="modal"
+                <button type="button" role="button" title="Supprimer le joueur" aria-label="supprimer" class="btn btn-danger" data-toggle="modal"
                     data-target="#ok{{$photo->id}}"><i class="fas fa-times"></i></button>
                 <!-- Modal -->
                 <div class="modal fade" id="ok{{$photo->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

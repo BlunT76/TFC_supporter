@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Site admin supporter TFC">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -73,7 +74,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <!-- Main Content -->
+        <main class="py-4" role="main">
             @if(count($errors) > 0)
             @foreach($errors->all() as $error)
             <div class="alert alert-danger alert-dismissible fade show col-xs-12 col-md-6 mx-auto text-center" role="alert">

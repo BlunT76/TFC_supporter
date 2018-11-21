@@ -23,8 +23,13 @@ nav {
 .card {
     height: 350px;
 }
+
 .card-img-top {
     height: 250px;
+}
+
+.colorTfc {
+	color: #3F3154;
 }
 
 

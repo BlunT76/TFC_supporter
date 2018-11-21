@@ -14,7 +14,7 @@
       <th scope="col">Joueur</th>
       <th scope="col">Numéro</th>
       <th scope="col">Poste</th>
-      <th scope="col"></th>
+      <th scope="col" class="colorTfc">Action</th>
 
     </tr>
   </thead>
@@ -26,7 +26,7 @@
       <td>{{ $player->position }}</td>
       <td class="text-right">
         <a href="{{route('players_edit', $player->id)}}" type="button" class="btn btnTfc" title="Modifier le joueur">Editer</a>
-        <button type="button" title="Supprimer le joueur" class="btn btn-danger" data-toggle="modal" data-target="#ok{{$player->id}}"><i class="fas fa-times"></i></button>
+        <button type="button" title="Supprimer le joueur" class="btn btn-danger" data-toggle="modal" data-target="#ok{{$player->id}}" aria-label="supprimer"><i class="fas fa-times"></i></button>
           <!-- Modal -->
           <div class="modal fade" id="ok{{$player->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">

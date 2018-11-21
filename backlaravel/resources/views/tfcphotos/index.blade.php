@@ -27,7 +27,7 @@
                     <p>Voulez-vous vraiment supprimer toutes les photos ? <br>Cette action est irrémédiable.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    <button type="button" role="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
                     <a href="{{route('photos_destroy')}}" type="button" class="btn btn-danger">Supprimer</a>
                 </div>
             </div>
@@ -40,9 +40,9 @@
         <div class="row">
             @foreach ($photos as $photo)
             <div class="card col-xs-12 col-sm-6 col-md-3">
-                <img class="card-img-top" src="{{$photo->url}}" alt="photo supporter">
+                <img class="card-img-top" src="{{$photo->url}}" alt="photo supporter {{$photo->id}}">
                 <div class="card-body">
-                    <button type="button" class="btn btnTfc" data-toggle="modal" data-target="#show{{$photo->id}}"
+                    <button type="button" role="button" aria-label="voir la photo" class="btn btnTfc" data-toggle="modal" data-target="#show{{$photo->id}}"
                         title="Voir cette photo"><i class="far fa-eye"></i></button>
 
                     <!-- Modal -->
@@ -56,15 +56,15 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="{{$photo->url}}" alt="photo supporter" class="img-fluid">
+                                    <img src="{{$photo->url}}" alt="photo supporter {{$photo->id}}" class="img-fluid">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- CheckBox -->
                     <div class="form-check text-right">
-                        <input type="checkbox" class="form-check-input" id="checkBox" name="{{$photo->id}}" value="{{$photo->id}}" title="Selectionner pour le top photo">
-                        <label class="form-check-label" for="checkBox">Selectionner</label>
+                        <input type="checkbox" aria-label="selectionner" class="form-check-input" id="checkBox{{$photo->id}}" name="{{$photo->id}}" value="{{$photo->id}}" title="Selectionner pour le top photo">
+                        <label class="form-check-label" for="checkBox{{$photo->id}}">Selectionner</label>
                     </div>
                 </div>
             </div>
