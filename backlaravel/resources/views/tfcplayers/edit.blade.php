@@ -3,7 +3,7 @@
 @section ('content')
 <div class="container-fluid">
   <div class="text-center">
-    <h1>Nouveau joueur</h1>
+    <h1>Modifier le joueur</h1>
   </div>
   <div class="col-xs-12 col-md-6 mx-auto">
     <form method="POST" action="{{ route ('players_update', $res->id)}}">
@@ -23,7 +23,28 @@
       </div>
       <div class="form-group">
         <label for="poste">Poste</label>
-        <input type="text" class="form-control" id="poste" name="position" value="{{ $res->position }}" required maxlength="50">
+        <select class="form-control" id="poste" name="position" required>
+          <option value="Gardien"
+              @if ( $res->position  == 'Gardien')
+                {{'selected'}}
+              @endif
+          >Gardien</option>
+          <option value="Défenseur"
+              @if ($res->position  == 'Défenseur')
+                {{'selected'}}
+              @endif
+          >Défenseur</option>
+          <option value="Milieu"
+              @if ($res->position == 'Milieu')
+                {{'selected'}}
+              @endif
+          >Milieu</option>
+          <option value="Attaquant"
+              @if ($res->position  == 'Attaquant')
+                {{'selected'}}
+              @endif
+          >Attaquant</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="photo">Photo</label>

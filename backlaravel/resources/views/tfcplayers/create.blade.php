@@ -22,7 +22,13 @@
       </div>
       <div class="form-group">
         <label for="poste">Poste</label>
-        <input type="text" class="form-control" id="poste" name="position" placeholder="Entrez le poste du joueur" required maxlength="50">
+        <select class="form-control" id="poste" name="position" required>
+          <option selected disabled hidden>Choisissez un poste</option>
+          <option value="Gardien">Gardien</option>
+          <option value="Défenseur">Défenseur</option>
+          <option value="Milieu">Milieu</option>
+          <option value="Attaquant">Attaquant</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="photo">Photo</label>
