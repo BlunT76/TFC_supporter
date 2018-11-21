@@ -16,7 +16,7 @@
 
         @foreach($game->topphotos as $photo)
         <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card my-2 shadow">
+        <div class="card my-2 shadow cardPhoto">
             <img class="card-img-top" src="{{$photo->url}}" alt="Top photo supporter {{$photo->id}} ">
             <div class="card-body">
                 <button type="button" role="button" class="btn btnTfc" data-toggle="modal" aria-label="voir la photo" data-target="#show{{$photo->id}}"

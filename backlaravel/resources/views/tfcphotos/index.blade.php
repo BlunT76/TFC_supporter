@@ -40,7 +40,7 @@
         <div class="row">
             @foreach ($photos as $photo)
             <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="card my-2 shadow">
+            <div class="card my-2 shadow cardPhoto">
                 <img class="card-img-top" src="{{$photo->url}}" alt="photo supporter {{$photo->id}}">
                 <div class="card-body">
                     <button type="button" role="button" aria-label="voir la photo" class="btn btnTfc" data-toggle="modal" data-target="#show{{$photo->id}}"
