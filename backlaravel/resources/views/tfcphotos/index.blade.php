@@ -4,8 +4,8 @@
 
 <div class="container-fluid">
 
-    <div class="text-center">
-    <h1>Espace photos supporters TFC</h1>
+    <div class="text-center mt-4">
+    <h1 class=" font-weight-bold colorTfcBis">ESPACE PHOTOS SUPPORTERS TFC</h1>
     </div>
 
     <div class="text-right my-3">
@@ -39,7 +39,8 @@
         @csrf
         <div class="row">
             @foreach ($photos as $photo)
-            <div class="card col-xs-12 col-sm-6 col-md-3">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="card my-2 shadow">
                 <img class="card-img-top" src="{{$photo->url}}" alt="photo supporter {{$photo->id}}">
                 <div class="card-body">
                     <button type="button" role="button" aria-label="voir la photo" class="btn btnTfc" data-toggle="modal" data-target="#show{{$photo->id}}"
@@ -67,6 +68,7 @@
                         <label class="form-check-label" for="checkBox{{$photo->id}}">Selectionner</label>
                     </div>
                 </div>
+            </div>
             </div>
             @endforeach
         </div>

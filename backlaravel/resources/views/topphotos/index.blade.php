@@ -2,17 +2,21 @@
 
 @section ('content')
 
-<h1>Top bouyaka !!</h1>
+<div class="text-center mt-4">
+<h1 class="font-weight-bold colorTfcBis">TOP PHOTOS DES SUPPORTERS</h1>
+</div>
 
 @foreach($res as $game)
 
-<div class="container-fluid">
-    <h2>{{$game->hometeam}} VS {{$game->visitor}} du {{$game->day}}</h2>
+<div class="container-fluid my-5">
+    <div class="text-center">
+    <h2 class="font-weight-bold colorTfc">{{$game->hometeam}} VS {{$game->visitor}} du {{$game->day}}</h2>
+    </div>
     <div class="row">
 
         @foreach($game->topphotos as $photo)
-
-        <div class="card col-3">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card my-2 shadow">
             <img class="card-img-top" src="{{$photo->url}}" alt="Top photo supporter {{$photo->id}} ">
             <div class="card-body">
                 <button type="button" role="button" class="btn btnTfc" data-toggle="modal" aria-label="voir la photo" data-target="#show{{$photo->id}}"
@@ -60,7 +64,7 @@
                 </div>
             </div>
         </div>
-
+        </div>
         @endforeach
     </div>
 </div>

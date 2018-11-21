@@ -83,7 +83,7 @@ class TopphotoController extends Controller
      */
     public function destroy($id)
     {
-        Topphoto::find($id)->delete();
+        Topphoto::findOrFail($id)->delete();
         return redirect()->route('top_index')->with('success', 'Vous avez bien supprimé la photo.');
     }
 }
