@@ -51,6 +51,10 @@ footer {
 	height: 10vh;
 }
 
+.bgTfc {
+	background-color: #3F3154;
+}
+
 .btnTfc {
     background-color: #3F3154;
     color: white;
