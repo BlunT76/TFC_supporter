@@ -8,6 +8,7 @@
     </div>
     <form method="POST" action="{{ route('players_store') }}" class="p-3">
       @csrf
+<!-- Formulaire de création d'un nouveau joueur -->
       <div class="form-group">
         <label for="firstname">Prénom :</label>
         <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Entrez le prénom" required maxlength="50">

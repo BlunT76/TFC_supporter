@@ -8,7 +8,7 @@
     </div> 
     <form method="POST" action="{{ route ('players_update', $res->id)}}" class="p-3">
         @csrf
-
+<!-- Formulaire d'édition du joueur avec ses informations -->
       <div class="form-group">
         <label for="firstname">Nom :</label>
         <input type="text" class="form-control" id="firstname" name="firstname" value="{{ $res->lastname }}" required maxlength="50">

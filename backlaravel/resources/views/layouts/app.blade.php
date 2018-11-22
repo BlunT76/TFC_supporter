@@ -44,14 +44,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto ml-5">
+                        <!-- Onglet Joueurs du TFC -->
                         <li class="nav-item">
                             <a class="nav-link active mr-3" href="{{ route('players_index') }}">{{ __('Les joueurs du
                                 TFC') }}</a>
                         </li>
+                        <!-- Onglet Les photos envoyés par les supprters -->
                         <li class="nav-item">
                             <a class="nav-link active mr-3" href="{{ route('photos_index') }}">{{ __('Les photos des
                                 supporters') }}</a>
                         </li>
+                        <!-- Onglet photos des supporters selectionnés par l'Admin -->
                         <li class="nav-item">
                             <a class="nav-link active" href="{{ route('top_index') }}">{{ __('Le top photo') }}</a>
                         </li>
@@ -76,7 +79,7 @@
                 </div>
             </div>
         </nav>
-
+<!-- Alerte info success ou error lors des action de modification et suppression sur le site  -->
         <main class="py-4 mb-3" role="main">
             @if(count($errors) > 0)
             @foreach($errors->all() as $error)
