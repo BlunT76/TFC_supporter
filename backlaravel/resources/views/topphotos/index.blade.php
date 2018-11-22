@@ -5,7 +5,7 @@
 <div class="text-center mt-4">
 <h1 class="font-weight-bold colorTfcBis">TOP PHOTOS DES SUPPORTERS</h1>
 </div>
-
+<!-- Affichage des photos des supporters selectionnées par l'admin -->
 @foreach($res as $game)
 
 <div class="container-fluid my-5">
@@ -22,7 +22,7 @@
                 <button type="button" role="button" class="btn btnTfc" data-toggle="modal" aria-label="voir la photo" data-target="#show{{$photo->id}}"
                     title="Voir cette photo"><i class="far fa-eye"></i></button>
 
-                <!-- Modal -->
+                <!-- Modal pour afficher la photo -->
                 <div class="modal fade" id="show{{$photo->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
@@ -41,7 +41,7 @@
 
                 <button type="button" role="button" title="Supprimer le joueur" aria-label="supprimer" class="btn btn-danger" data-toggle="modal"
                     data-target="#ok{{$photo->id}}"><i class="fas fa-times"></i></button>
-                <!-- Modal -->
+                <!-- Modal de confirmation de suppression de la photo -->
                 <div class="modal fade" id="ok{{$photo->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog" role="document">

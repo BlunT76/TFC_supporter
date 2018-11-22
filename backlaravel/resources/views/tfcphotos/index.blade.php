@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<!-- Affichage et récupération de toutes les photos des supporters -->
 <div class="container-fluid">
 
     <div class="text-center mt-4">
@@ -13,7 +13,7 @@
         tout</button>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal de suppression de toutes les photos -->
     <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -46,7 +46,7 @@
                     <button type="button" role="button" aria-label="voir la photo" class="btn btnTfc" data-toggle="modal" data-target="#show{{$photo->id}}"
                         title="Voir cette photo"><i class="far fa-eye"></i></button>
 
-                    <!-- Modal -->
+                    <!-- Modal d'affichage de la photo -->
                     <div class="modal fade" id="show{{$photo->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- CheckBox -->
+                    <!-- CheckBox de validation de selection de la photo -->
                     <div class="form-check text-right">
                         <input type="checkbox" aria-label="selectionner" class="form-check-input" id="checkBox{{$photo->id}}" name="{{$photo->id}}" value="{{$photo->id}}" title="Selectionner pour le top photo">
                         <label class="form-check-label" for="checkBox{{$photo->id}}">Selectionner</label>

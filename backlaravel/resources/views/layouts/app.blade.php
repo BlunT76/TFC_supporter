@@ -112,8 +112,18 @@
 
         </main>
 
-        <footer class="bgTfc text-center">
-            <p class="pt-2 text-white">&copy TFC supporters Bouyaka</p>
+<!-- Footer -->
+        <footer class="bgTfc navbar">
+            <ul class="nav nav-link card-header-tabs mr-auto">
+            <li class="ml-2 nav-item text-white">&copy TFC supporters Bouyaka</li>
+            </ul>
+            
+            <ul class="nav nav-tabs card-header-tabs ml-auto">
+                <li><a href="https://github.com/SDarmandieu" target="_blank" rel="noopener" class="m-4 nav-item text-white"><i class="fab fa-github"></i> Simon</a></li>
+                <li><a href="https://github.com/BlunT76" target="_blank" rel="noopener"class="m-4 nav-item text-white"><i class="fab fa-github"></i> Philippe</a></li>
+                <li><a href="https://github.com/OmnipreZz" target="_blank" rel="noopener"class="m-4 nav-item text-white"><i class="fab fa-github"></i> Geoffrey</a></li>
+                <li><a href="https://github.com/Vanoux" target="_blank" rel="noopener"class="m-2 nav-item text-white"><i class="fab fa-github"></i> Vanessa</a></li>
+            </ul>
         </footer>
     </div>
 </body>
