@@ -4,12 +4,12 @@
 <div class="text-center mt-4">
     <h1 class=" font-weight-bold colorTfcBis">JOUEURS DU TFC</h1>
 </div>
-<!-- Bouton pour ajouter un nouveau joueur -->
+<!-- Bouton pour ajouter un nouveau joueur du TFC -->
 <div class="mb-5 ml-4">
     <a href="{{route('players_create')}}" type="button" class="btn btn-primary" title="Ajouter un nouveau joueur"><i
             class="fas fa-plus mr-2"></i>Nouveau joueur</a>
 </div>
-<!-- Affichage tableau des joueurs -->
+<!-- Affichage tableau de tout les joueurs du TFC -->
 <table class="table table-striped mb-5">
     <thead class="theadTfc">
         <tr>
@@ -30,7 +30,7 @@
                 <a href="{{route('players_edit', $player->id)}}" type="button" class="btn btnTfc" title="Modifier le joueur">Editer</a>
                 <button type="button" title="Supprimer le joueur" class="btn btn-danger" data-toggle="modal"
                     data-target="#ok{{$player->id}}" aria-label="supprimer"><i class="fas fa-times"></i></button>
-                <!-- Modal de confirmation de suppression du joueur -->
+                <!-- Button suppression + Modal de confirmation de la suppression du joueur -->
                 <div class="modal fade" id="ok{{$player->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog" role="document">
