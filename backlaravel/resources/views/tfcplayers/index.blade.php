@@ -9,7 +9,7 @@
             class="fas fa-plus mr-2"></i>Nouveau joueur</a>
 </div>
 
-<table class="table table-striped mb-4">
+<table class="table table-striped mb-5">
     <thead class="theadTfc">
         <tr>
             <th scope="col">Joueur</th>
