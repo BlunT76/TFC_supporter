@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>TFC Supporters</title>
+    <title>Bienvenue sur TFC Supporters: l'application mobile des supporters Toulousains</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -28,12 +28,35 @@
 </head>
 
 <body>
-
-<div class="container-fluid publicHome">
-    <h1>Ici c'est l'accueil Bouyaka !!!</h1>
-    <div class="text-right">
-        <a href="{{route('home')}}" type="button" class="btn btnTfc mt-4 mr-2" title="Accès administrateur">Session Admin</a>
+<div class="bgHome" style="background-image:url({{url('images/supps.jpg')}})">
+</div>
+<div class="publicHome">
+</div>
+<div class="container-fluid textHome">
+    <div class="lol text-center">
+        <div class="text-right">
+            <a href="{{route('home')}}" type="button" class="btn btnTfc btnAdmin mt-4 mr-2" title="Accès administrateur">Session Admin</a>
+        </div>
+        <h1 class="text-white pt-4">Bienvenue sur TFC Supporters</h1>
     </div>
+        <div class="imgHome text-center">
+        <img class="img-fluid" src="images/tfc.png" alt="">
+        </div>
+    <div class="lol mt-5">
+        <div class="text-center">
+            <a href="" type="button" class="btn btnHome mt-4 mr-2" title="Télécharger l'application TFC Supporters">TELECHARGER L'APP MOBILE</a>
+        </div>
+    </div>
+</div>
+    
+    
+    
+
+    
+    
+
+    
+
 </div>
 
 
