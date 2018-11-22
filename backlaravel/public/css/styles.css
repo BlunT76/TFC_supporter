@@ -1,9 +1,13 @@
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////Styles TFC Supporter//////////////////////////////// */
+.publicHome {
+	height: 100vh;
+}
+
 html {
     position: relative;
-    min-height: 100%;
+	min-height: 100%;
 }
  
 footer {
