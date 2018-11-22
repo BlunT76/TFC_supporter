@@ -77,7 +77,7 @@
             </div>
         </nav>
 
-        <main class="py-4" role="main">
+        <main class="py-4 mb-3" role="main">
             @if(count($errors) > 0)
             @foreach($errors->all() as $error)
             <div class="alert alert-danger alert-dismissible fade show col-xs-12 col-md-6 mx-auto text-center" role="alert">
