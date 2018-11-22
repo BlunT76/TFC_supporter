@@ -72,7 +72,7 @@
             </div>
             @endforeach
         </div>
-        <div class="text-center my-4 col-xs-12 col-md-6 mx-auto">
+        <div class="text-center my-4 col-xs-12 col-md-6 mx-auto mb-5">
             <button type="submit" class="btn btn-primary btn-lg btn-block" title="Enregistrer les photos selectionnées">Envoyer</button>
         </div>
     </form>
