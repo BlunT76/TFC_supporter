@@ -113,7 +113,7 @@
         </main>
 
         <footer class="bgTfc text-center">
-            <p class="pt-2 text-white">&copy Vanessa n'a aucun caractère</p>
+            <p class="pt-2 text-white">&copy TFC supporters Bouyaka</p>
         </footer>
     </div>
 </body>
