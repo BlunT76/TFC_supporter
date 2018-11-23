@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+    
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="images/tfc.png"/>
+    <link rel="icon" type="image/png" href="images/tfc1.png"/>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -33,7 +33,7 @@
 <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark sticky-top bgTfc">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{route('home')}}">
                     Accueil
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -44,14 +44,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto ml-5">
+                        <!-- Onglet Joueurs du TFC -->
                         <li class="nav-item">
                             <a class="nav-link active mr-3" href="{{ route('players_index') }}">{{ __('Les joueurs du
                                 TFC') }}</a>
                         </li>
+                        <!-- Onglet Les photos envoyés par les supprters -->
                         <li class="nav-item">
                             <a class="nav-link active mr-3" href="{{ route('photos_index') }}">{{ __('Les photos des
                                 supporters') }}</a>
                         </li>
+                        <!-- Onglet photos des supporters selectionnés par l'Admin -->
                         <li class="nav-item">
                             <a class="nav-link active" href="{{ route('top_index') }}">{{ __('Le top photo') }}</a>
                         </li>
@@ -76,8 +79,8 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4" role="main">
+<!-- Alerte info success ou error lors des action de modification et suppression sur le site  -->
+        <main class="py-4 mb-3" role="main">
             @if(count($errors) > 0)
             @foreach($errors->all() as $error)
             <div class="alert alert-danger alert-dismissible fade show col-xs-12 col-md-6 mx-auto text-center" role="alert">
@@ -112,8 +115,20 @@
 
         </main>
 
-        <footer class="bgTfc text-center">
-            <p class="pt-2 text-white">&copy Vanessa n'a aucun caractère</p>
+<!-- Footer -->
+        <footer class="bgTfc">
+            <div class="navbar">
+            <ul class="nav nav-link card-header-tabs mr-auto">
+            <li class="ml-2 nav-item text-white">&copy TFC supporters Bouyaka</li>
+            </ul>
+            
+            <ul class="nav nav-tabs card-header-tabs ml-auto">
+                <li><a href="https://github.com/SDarmandieu" target="_blank" rel="noopener" class="m-4 nav-item text-white"><i class="fab fa-github"></i> Simon</a></li>
+                <li><a href="https://github.com/BlunT76" target="_blank" rel="noopener"class="m-4 nav-item text-white"><i class="fab fa-github"></i> Philippe</a></li>
+                <li><a href="https://github.com/OmnipreZz" target="_blank" rel="noopener"class="m-4 nav-item text-white"><i class="fab fa-github"></i> Geoffrey</a></li>
+                <li><a href="https://github.com/Vanoux" target="_blank" rel="noopener"class="m-2 nav-item text-white"><i class="fab fa-github"></i> Vanessa</a></li>
+            </ul>
+            </div>
         </footer>
     </div>
 </body>

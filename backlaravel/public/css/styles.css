@@ -1,8 +1,59 @@
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////Styles TFC Supporter//////////////////////////////// */
+.bgHome {
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-attachment : fixed;
+	position: absolute;
+	z-index: 0;
+}
+
+.publicHome {
+	height: 100vh;
+	width: 100%;
+	background-color: #3F3154;
+	opacity: 0.7;
+	position: absolute;
+	z-index: 1;
+}
+
+.textHome {
+	height: 100vh;
+	width: 100%;
+	background: transparent;
+	position: absolute;
+	z-index: 2;
+	overflow-y: hidden;
+}
+
+.imgHome {
+	height: 40vh;
+}
+
+.imgHome img {
+	height: 250px;
+}
+
+.lol {
+	height: 30vh;
+}
+
+html {
+    position: relative;
+	min-height: 100%;
+}
+ 
+footer {
+    position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 10vh;
+}
+
 .bgTfc {
-    background-color: #3F3154;
+	background-color: #3F3154;
 }
 
 .btnTfc {
@@ -12,6 +63,26 @@
 
 .btnTfc:hover {
     background-color: #9c85be;
+    color: #3F3154;
+}
+
+.btnAdmin {
+    border: 1px solid white;
+}
+
+.btnAdmin:hover {
+    border: 1px solid #3F3154;
+}
+
+.btnHome {
+   background-color: #cf6a87;
+   color:white;
+   font-weight: bold;
+   border-radius: 25px;
+}
+
+.btnHome:hover {
+	background-color: #9c85be;
     color: #3F3154;
 }
 
@@ -36,10 +107,9 @@
 	color: #9c85be;
 }
 
-footer {
-	height: 10vh;
+.formTfc {
+	background-color: #9c85be;
 }
-
 /* /////////////////// */
 /* ///////// */
 /* ////////////////////////////////Media Responsiv Table//////////////////////////////// */
@@ -85,4 +155,8 @@ only screen and (max-width: 767px) {
 
 @media (max-width: 576px) {
 
+	footer {
+		height : 17vh;
+	}
+	
 }

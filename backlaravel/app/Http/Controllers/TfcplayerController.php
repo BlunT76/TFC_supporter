@@ -90,7 +90,7 @@ class TfcplayerController extends Controller
             'number' => $request->input('number'),
             'position' => $request->input('position'),
         ]);
-        return redirect()->route('players_index')->with('success', 'Vous avez bien modifie le joueur.');
+        return redirect()->route('players_index')->with('success', 'Vous avez bien modifié le joueur.');
     }
 
     /**

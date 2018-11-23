@@ -1,19 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-
+<!-- Affichage et récupération de toutes les photos des supporters -->
 <div class="container-fluid">
 
     <div class="text-center mt-4">
     <h1 class=" font-weight-bold colorTfcBis">ESPACE PHOTOS SUPPORTERS TFC</h1>
     </div>
 
+@if(!empty($photos->all()))
     <div class="text-right my-3">
     <button type="button" class="btn btn-danger mb-3 pt-2" data-toggle="modal" data-target="#delete" title="Supprimer toutes les photos">Effacer
         tout</button>
     </div>
-
-    <!-- Modal -->
+@endif
+    <!-- Modal de suppression de toutes les photos -->
     <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -46,7 +47,7 @@
                     <button type="button" role="button" aria-label="voir la photo" class="btn btnTfc" data-toggle="modal" data-target="#show{{$photo->id}}"
                         title="Voir cette photo"><i class="far fa-eye"></i></button>
 
-                    <!-- Modal -->
+                    <!-- Modal d'affichage de la photo -->
                     <div class="modal fade" id="show{{$photo->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
@@ -62,7 +63,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- CheckBox -->
+                    <!-- CheckBox de validation de selection de la photo -->
                     <div class="form-check text-right">
                         <input type="checkbox" aria-label="selectionner" class="form-check-input" id="checkBox{{$photo->id}}" name="{{$photo->id}}" value="{{$photo->id}}" title="Selectionner pour le top photo">
                         <label class="form-check-label" for="checkBox{{$photo->id}}">Selectionner</label>
@@ -72,9 +73,15 @@
             </div>
             @endforeach
         </div>
-        <div class="text-center my-4 col-xs-12 col-md-6 mx-auto">
+      
+        <div class="text-center my-4 col-xs-12 col-md-6 mx-auto mb-5">
+        @if(!empty($photos->all()))
             <button type="submit" class="btn btn-primary btn-lg btn-block" title="Enregistrer les photos selectionnées">Envoyer</button>
+            @else
+            <p>Il n'y pas de photos pour le moment !</p>
+            @endif
         </div>
+        
     </form>
 
 </div>

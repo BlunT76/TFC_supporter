@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<!-- Page d'accueil Admin connecté -->
+<div class="container mb-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -12,6 +13,7 @@
                 <div class="card-body text-center">
                     <img src="images/tfc.png" alt="Logo TFC">
                 </div>
+                <!-- Descriptif de chaque onglets avec liens vers les pages -->
                 <div class="card-footer colorTfc text-center">
                     <ul class="list-group">
                         <li class="list-group-item">L'onglet <a href="{{ route('players_index') }}">"Les joueurs du

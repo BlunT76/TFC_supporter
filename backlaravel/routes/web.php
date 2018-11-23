@@ -14,10 +14,17 @@ use App\Http\Controllers\TfcplayerController;
 */
 
 
+//Accueil Public
+Route::get('/', 'PublicController@home')->name('public');
+
+//RGPD
+Route::get('/rgpd', 'PublicController@rgpd')->name('rgpd');
+
+
 Auth::routes();
 
 // Home
-Route::get('/', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 // Cette route sert juste à cacher le fichier register
 Route::get('/register')->name('register')->middleware('auth');
