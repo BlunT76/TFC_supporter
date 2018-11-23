@@ -10,4 +10,9 @@ class PublicController extends Controller
     {
         return view('public');
     }
+
+    public function rgpd()
+    {
+        return view('rgpd');
+    }
 }

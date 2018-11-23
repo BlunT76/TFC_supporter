@@ -36,7 +36,7 @@
     <div class="container-fluid textHome">
         <div class="lol text-center">
             <div class="text-right">
-                <a href="{{route('home')}}" type="button" class="btn btnTfc btnAdmin mt-4 mr-2" title="Accès administrateur">Session Admin</a>
+                <a href="{{route('home')}}" type="button" class="btn btnTfc btnAdmin mt-4 mr-2" title="Accès administrateur">Connexion</a>
             </div>
             <h1 class="text-white pt-4">Bienvenue sur TFC Supporters</h1>
         </div>
@@ -47,6 +47,9 @@
             <div class="text-center">
                 <a href="" type="button" class="btn btnHome mt-4 mr-2" title="Télécharger l'application TFC Supporters">TELECHARGER L'APP MOBILE</a>
             </div>
+        <div class="text-right fixed-bottom pr-2">
+            <a href="{{route('rgpd')}}" class="text-white">Mentions légales</a>
+        </div>
         </div>
     </div>
     

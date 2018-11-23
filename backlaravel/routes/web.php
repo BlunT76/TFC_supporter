@@ -17,6 +17,9 @@ use App\Http\Controllers\TfcplayerController;
 //Accueil Public
 Route::get('/', 'PublicController@home')->name('public');
 
+//RGPD
+Route::get('/rgpd', 'PublicController@rgpd')->name('rgpd');
+
 
 Auth::routes();
 
