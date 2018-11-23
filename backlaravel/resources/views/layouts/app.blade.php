@@ -116,7 +116,8 @@
         </main>
 
 <!-- Footer -->
-        <footer class="bgTfc navbar">
+        <footer class="bgTfc">
+            <div class="navbar">
             <ul class="nav nav-link card-header-tabs mr-auto">
             <li class="ml-2 nav-item text-white">&copy TFC supporters Bouyaka</li>
             </ul>
@@ -127,6 +128,7 @@
                 <li><a href="https://github.com/OmnipreZz" target="_blank" rel="noopener"class="m-4 nav-item text-white"><i class="fab fa-github"></i> Geoffrey</a></li>
                 <li><a href="https://github.com/Vanoux" target="_blank" rel="noopener"class="m-2 nav-item text-white"><i class="fab fa-github"></i> Vanessa</a></li>
             </ul>
+            </div>
         </footer>
     </div>
 </body>
