@@ -29,17 +29,16 @@
 }
 
 .imgHome {
-	height: 30vh;
+	height: 40vh;
 }
 
 .imgHome img {
-	height: 200px;
+	height: 250px;
 }
 
 .lol {
-	height: 35vh;
+	height: 30vh;
 }
-
 
 html {
     position: relative;
@@ -76,7 +75,7 @@ footer {
 }
 
 .btnHome {
-   background-color: #dca2ae;
+   background-color: #cf6a87;
    color:white;
    font-weight: bold;
    border-radius: 25px;
