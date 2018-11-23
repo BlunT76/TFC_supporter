@@ -9,8 +9,9 @@
 @foreach($res as $game)
 <!-- Affichage des matchs avec les équipes  -->
 <div class="container-fluid my-5">
+
     <div class="text-center">
-        <h2 class="font-weight-bold colorTfc">{{$game->hometeam}} vs {{$game->visitor}} du {{$game->day}}</h2>
+        <h2 class="font-weight-bold colorTfc">{{$game->hometeam}} vs {{$game->visitor}} du {{strftime("%d-%m-%Y", strtotime($game->day))}}</h2>
     </div>
 
     <!-- Affichage des photos des supporters selectionnées par l'admin par matchs-->

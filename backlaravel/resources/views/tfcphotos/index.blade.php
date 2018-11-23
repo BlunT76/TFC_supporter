@@ -8,11 +8,12 @@
     <h1 class=" font-weight-bold colorTfcBis">ESPACE PHOTOS SUPPORTERS TFC</h1>
     </div>
 
+@if(!empty($photos->all()))
     <div class="text-right my-3">
     <button type="button" class="btn btn-danger mb-3 pt-2" data-toggle="modal" data-target="#delete" title="Supprimer toutes les photos">Effacer
         tout</button>
     </div>
-
+@endif
     <!-- Modal de suppression de toutes les photos -->
     <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -72,9 +73,15 @@
             </div>
             @endforeach
         </div>
+      
         <div class="text-center my-4 col-xs-12 col-md-6 mx-auto mb-5">
+        @if(!empty($photos->all()))
             <button type="submit" class="btn btn-primary btn-lg btn-block" title="Enregistrer les photos selectionnées">Envoyer</button>
+            @else
+            <p>Il n'y pas de photos pour le moment !</p>
+            @endif
         </div>
+        
     </form>
 
 </div>
