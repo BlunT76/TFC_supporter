@@ -19,15 +19,17 @@ class VoteController extends Controller
 
     public function voter(Request $request)
     {
-        // Vote::create([
-        //     'game_id' => $game_id,
-        //     'tfcplayer_id' => $tfcplayer_id
-        // ]);
+        $game = $request->game;
+        $player = $request->player;
 
-        $res = $request->all();
+        Vote::create([
+            'game_id' => $game,
+            'tfcplayer_id' => $player
+        ]);
+
 
         return response()->json([
-            'game' => $res
+            'vote' => $res
         ]);
     }
 
