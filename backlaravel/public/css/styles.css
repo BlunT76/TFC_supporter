@@ -9,6 +9,7 @@
 	position: absolute;
 	z-index: 0;
 }
+
 .publicHome {
 	height: 100vh;
 	width: 100%;
@@ -24,6 +25,7 @@
 	background: transparent;
 	position: absolute;
 	z-index: 2;
+	overflow-y: hidden;
 }
 
 .imgHome {

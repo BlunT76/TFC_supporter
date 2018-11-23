@@ -28,38 +28,28 @@
 </head>
 
 <body>
-<div class="bgHome" style="background-image:url({{url('images/supps.jpg')}})">
-</div>
-<div class="publicHome">
-</div>
-<div class="container-fluid textHome">
-    <div class="lol text-center">
-        <div class="text-right">
-            <a href="{{route('home')}}" type="button" class="btn btnTfc btnAdmin mt-4 mr-2" title="Accès administrateur">Session Admin</a>
-        </div>
-        <h1 class="text-white pt-4">Bienvenue sur TFC Supporters</h1>
+
+    <div class="bgHome" style="background-image:url({{url('images/supps.jpg')}})">
     </div>
-        <div class="imgHome text-center">
-        <img class="img-fluid" src="images/tfc.png" alt="">
+    <div class="publicHome">
+    </div>
+    <div class="container-fluid textHome">
+        <div class="lol text-center">
+            <div class="text-right">
+                <a href="{{route('home')}}" type="button" class="btn btnTfc btnAdmin mt-4 mr-2" title="Accès administrateur">Session Admin</a>
+            </div>
+            <h1 class="text-white pt-4">Bienvenue sur TFC Supporters</h1>
         </div>
-    <div class="lol mt-5">
-        <div class="text-center">
-            <a href="" type="button" class="btn btnHome mt-4 mr-2" title="Télécharger l'application TFC Supporters">TELECHARGER L'APP MOBILE</a>
+            <div class="imgHome text-center">
+                <img class="img-fluid" src="images/tfc.png" alt="">
+            </div>
+        <div class="lol mt-5">
+            <div class="text-center">
+                <a href="" type="button" class="btn btnHome mt-4 mr-2" title="Télécharger l'application TFC Supporters">TELECHARGER L'APP MOBILE</a>
+            </div>
         </div>
     </div>
-</div>
     
-    
-    
-
-    
-    
-
-    
-
-</div>
-
-
 </body>
 
 </html>
