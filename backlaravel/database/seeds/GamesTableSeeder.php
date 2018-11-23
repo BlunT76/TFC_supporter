@@ -44,13 +44,13 @@ class GamesTableSeeder extends Seeder
         DB::table('games')->insert([
             'hometeam' => 'TFC',
             'visitor'=> 'OM',
-            'day'=> "2018-11-21 17:00:00"
+            'day'=> "2018-11-23 16:00:00"
         ]);
 
         DB::table('games')->insert([
             'hometeam' => 'EAG',
             'visitor'=> 'TFC',
-            'day'=> "2019-12-19 17:00:00"
+            'day'=> "2018-12-19 17:00:00"
         ]);
 
         DB::table('games')->insert([
