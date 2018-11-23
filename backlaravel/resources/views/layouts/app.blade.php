@@ -33,7 +33,7 @@
 <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark sticky-top bgTfc">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{route('home')}}">
                     Accueil
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

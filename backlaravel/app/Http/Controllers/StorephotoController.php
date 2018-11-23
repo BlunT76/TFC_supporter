@@ -102,7 +102,7 @@ class StorephotoController extends Controller
                 'url' => $photo->url
             ]);   
         }
-        return redirect()->route('photos_index')->with('success', 'Photos envoyée dans le Top de l\'appli TFC');
+        return redirect()->route('photos_index')->with('success', 'Photos envoyées dans le Top de l\'appli TFC');
         
     }
 }

@@ -40,7 +40,7 @@
         <h1 class="text-white pt-4">Bienvenue sur TFC Supporters</h1>
     </div>
         <div class="imgHome text-center">
-        <img class="img-fluid" src="images/tfc.png" alt="">
+        <img class="img-fluid" src="images/tfc.png" alt="Logo TFC">
         </div>
     <div class="lol mt-5">
         <div class="text-center">
