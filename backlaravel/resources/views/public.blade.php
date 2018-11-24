@@ -45,7 +45,7 @@
             </div>
         <div class="lol mt-5">
             <div class="text-center">
-                <a href="" type="button" class="btn btnHome mt-4 mr-2" title="Télécharger l'application TFC Supporters">TELECHARGER L'APP MOBILE</a>
+                <a href="link/tfc.apk" type="button" class="btn btnHome mt-4 mr-2" title="Télécharger l'application TFC Supporters">TELECHARGER L'APP MOBILE</a>
             </div>
         <div class="text-right fixed-bottom pr-2">
             <a href="{{route('rgpd')}}" class="text-white">Mentions légales</a>

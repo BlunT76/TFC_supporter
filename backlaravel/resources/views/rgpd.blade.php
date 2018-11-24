@@ -38,7 +38,7 @@
 
             <h2 class="text-center">Introduction</h2>
             <p class="text-left text-dark">Le document ci-dessous présente les termes suivants que l’on définit ainsi :
-«TFC Supporters»  (https://tfcsupporters.herokuapp.com),
+                «TFC Supporters»  (https://tfcsupporters.herokuapp.com),
                 <br> Quand vous naviguez sur notre application, notamment « TFC Supporters » (nommée «l’Application » dans ce qui suit), vous donnez votre accord au traitement de vos données personnelles nommé la « Politique » dans la suite de ce document tel qu’expliqué dans cette « Politique ».
                 <br> La protection de vos données enregistrées compte pour nous. De ce fait, la politique des données a été revisitée et actualisée en prenant en compte les exigences du Règlement Général sur le Protection des Données. Il est bon de télécharger et de sauvegarder cette « Politique ».
                 <br>
@@ -127,7 +127,7 @@
                 <p>Si vous publiez votre avis à propos de nos services sur internet (par exemple sur Facebook, Google Reviews,
                     …), l’avis partagé et la transmission d’informations personnelles qui peut en découler est à votre entière
                     responsabilité. Les conditions générales d’utilisation de ces services qui régissent ces transmissions
-                    ne rentrent pas dans le cadre de la responsabilité de la MDA.</p>
+                    ne rentrent pas dans le cadre de la responsabilité du TFC.</p>
                 <li>2.3  Autres divulgations</li>
                 <p>Nous pouvons aussi divulguer vos informations personnelles ou d’utilisateur (ID, …) dans les circonstances
                     suivantes aux parties suivantes, sans lien avec ce qui précède :
@@ -153,7 +153,7 @@
                 <li>3.1  Informations dont nous sommes le responsable du traitement</li>
                 <p>Nous sommes le responsable du traitement des données que nous recueillons avec votre accord.
                     <br> Nous sommes le responsable du traitement des données que nous recueillons avec votre accord.
-                    Nous sommes aussi responsables du traitement des données en ce qui concerne les informations qui sont divulguées à d’autres prestataires (voir la section 2.4). La collecte des données par l’application du TFC est régie par les lois françaises en matière de protection des données.
+                    Nous sommes aussi responsables du traitement des données en ce qui concerne les informations qui sont divulguées à d’autres prestataires (voir la section 2.3). La collecte des données par l’application du TFC est régie par les lois françaises en matière de protection des données.
                     <br> Étant responsable du traitement des données, le TFC s’assure que ses sous-traitants respectent les mesures de sécurité techniques, physiques et organisationnelles qui sont nécessaires, pertinentes et raisonnables afin de garantir la protection des données collectées.
                     <br>
                 </p>
@@ -219,7 +219,7 @@
 
             <h2 class="text-left text-red"> 6. Les modalités d’exercice des droits des personnes concernées</h2>
             <p class="text-left text-dark">Si le traitement des données personnelles vous concerne et que vous souhaitez exercer l’un de    vos droits mentionnés
-                dans le point 5, merci de nous adresser un courrier par voie électronique à  MAIL ADMIN ou à AUTRE MAIL ADMIN ou bien par voie postale à notre siège social du TFC.
+                dans le point 5, merci de nous adresser un courrier par voie électronique à "ADMIN_TFC" ou bien par voie postale à notre siège social du TFC.
                 <br> Le traitement de ces demandes peut être refusé par le TFC (article 12.5 RGPD) si elles se révèlent excessives ou infondées, par exemple lorsqu’elles sont répétitives.
             </p>
 
